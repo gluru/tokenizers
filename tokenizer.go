@@ -1,9 +1,11 @@
 package tokenizers
 
 // TODO packaging: how do we build the rust lib for distribution?
+//    Since we pre-compile rust maybe we can bundle different versions.
+// #cgo LDFLAGS: ${SRCDIR}/libtokenizers-${GOOS}-${GOARCH}.a -ldl -lstdc++
 
 /*
-#cgo LDFLAGS: ${SRCDIR}/libtokenizers.a -ldl -lstdc++
+#cgo LDFLAGS: ${SRCDIR}/libtokenizers-linux-amd64.a -ldl -lstdc++
 #include <stdlib.h>
 #include "tokenizers.h"
 */
